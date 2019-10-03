@@ -11,7 +11,7 @@ def direction
     puts result = dice
     if result >= 5
       score += 1
-      puts "Tu as avance d'une marche"
+      puts "Tu as avance d'une marche "
     elsif result == 1
       score -= 1
       puts "Tu as descendu d'une marche"
