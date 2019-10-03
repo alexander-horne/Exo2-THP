@@ -9,7 +9,9 @@ def ask_first_name
   return first_name
 end
 
-def
-  puts say_hello
-  puts ask_first_name
-  puts ask_last_name
+def greet(first_name)
+  return "Bonjour #{first_name}"
+end
+
+my_first_name = ask_first_name
+puts greet(my_first_name)
