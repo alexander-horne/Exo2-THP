@@ -18,13 +18,13 @@ def full_pyramid
     puts "Voici la pyramide :"
 
     blank = step - 1
-    for i in 1..step do
-        block = i
+    block = 1
+    step.times do
         puts "#{' ' * blank}#{'#' * block}#{' ' * blank}"
         block += 2
         blank -= 1
     end
 end
 
+# half_pyramid
 full_pyramid
-#half_pyramid
