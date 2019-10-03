@@ -7,8 +7,24 @@ def half_pyramid
     blank = 0
     for i in 1..step do
         blank = step - i
-        puts "#{' '*blank}#{'#'*i}"
+        puts "#{' ' * blank}#{'#' * i}"
     end
 end
 
-half_pyramid
+def full_pyramid
+    puts "Salut, bienvenue dans ma super pyriamide ! Combien d'etage veux-tu chere personne qui m'utilise en se moment meme ?"
+    print "> "
+    step = gets.chomp.to_i
+    puts "Voici la pyramide :"
+
+    blank = step - 1
+    for i in 1..step do
+        block = i
+        puts "#{' ' * blank}#{'#' * block}#{' ' * blank}"
+        block += 2
+        blank -= 1
+    end
+end
+
+full_pyramid
+#half_pyramid
