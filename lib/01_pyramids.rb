@@ -32,20 +32,20 @@ def wtf_pyramid
     print "> "
     step = gets.chomp.to_i
     puts "Voici la pyramide :"
-    blank = ((step - 1) / 2) +1
-    block = -1
+    blank = (step - 1) / 2
+    block = 1
     i = 0
     step.times do
-        i =+ 1
-        if i <= step # (step/2) + 1
+        # puts "i = #{i} | step = #{step} | block = #{block} | blank #{blank}"
+        puts "#{' ' * blank}#{'#' * block}#{' ' * blank}"
+        i += 1
+        if i < (step/2) + 1
             block += 2
             blank -= 1
         else
             block -= 2
             blank += 1
         end
-        puts "#{i} : block = #{block} | blank #{blank}
-        puts "#{' ' * blank}#{'#' * block}#{' ' * blank}"
     end
 end
 
