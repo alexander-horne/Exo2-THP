@@ -1,22 +1,40 @@
-def ask_user
-  puts "Quel utilisateur ete vous ?"
+def signup
+   puts "Definissez un mot de passe s'il vous plait"
+   print "> "
+   password = gets.chomp
+   return password
+end
+
+def signin(password)
+  puts "Rensegne ton mot de passe"
   print "> "
-  user = gets.chomp
-  if user == "Alexander"
-    user_alex_password
+  input = gets.chomp
+  while input != password
+    puts "Mauvais mot de passe. Rensegne ton mot de passe"
+    print "> "
+    input = gets.chomp
   end
 end
 
-def user_alex_password
-  puts "Votre mot de passe s'il vous plait"
-  print "> "
-  password = gets.chomp
-  if password != "New2cat5"
-    puts "Mauvais mot de passe. Veuillez mettre le bon mot de passe s'il vous plait..."
-  else
-    puts "Bienvenue Alexander Frederick William Horne"
-  end
+def welcome_screen
+  puts "-------------------------------------------------------------"
+  puts ".                                                           ."
+  puts ".                                                           ."
+  puts ".                       BIENVENUE                           ."
+  puts ".                                                           ."
+  puts ".                                                           ."
+  puts ".                    PERSONNE *WINK*                        ."
+  puts ".                                                           ."
+  puts ".                                                           ."
+  puts ".                                                           ."
+  puts ".                                                           ."
+  puts "-------------------------------------------------------------"
 end
 
-ask_user
-user_alex_password
+def perform
+  password = signup
+  signin(password)
+  welcome_screen
+end
+
+perform
