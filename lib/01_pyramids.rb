@@ -31,6 +31,11 @@ def wtf_pyramid
     puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ? (choisis un nombre impair)"
     print "> "
     step = gets.chomp.to_i
+    while step%2 == 0
+        puts "On t'a demandé un nombre impair !"
+        print "> "
+        step = gets.chomp.to_i 
+    end
     puts "Voici la pyramide :"
     blank = (step - 1) / 2
     block = 1
@@ -49,6 +54,6 @@ def wtf_pyramid
     end
 end
 
-# half_pyramid
-# full_pyramid
+half_pyramid
+full_pyramid
 wtf_pyramid
