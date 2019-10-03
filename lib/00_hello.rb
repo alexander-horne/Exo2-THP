@@ -13,5 +13,6 @@ def greet(first_name)
   return "Bonjour #{first_name}"
 end
 
+puts say_hello
 my_first_name = ask_first_name
 puts greet(my_first_name)
