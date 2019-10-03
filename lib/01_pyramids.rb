@@ -36,7 +36,7 @@ def wtf_pyramid
         print "> "
         step = gets.chomp.to_i 
     end
-    puts "Voici la pyramide :"
+    puts "Voici la pyramide:"
     blank = (step - 1) / 2
     block = 1
     i = 0
