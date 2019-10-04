@@ -19,7 +19,7 @@ def direction
       puts "Tu reste a ta place"
     end
   end
-  puts "Vous avez gagnez en #{n}, bravo !"
+  puts "Vous avez gagnez en #{n}, bravo ! Tu es arriver enfin a la 10eme marche"
 end
 
 dice
